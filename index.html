@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fleet Parts Reference | Tomorrow.bio</title>
+  <meta name="description" content="Service parts, fluids and intervals for the Tomorrow.bio / EBF Mercedes Sprinter fleet." />
+  <meta name="theme-color" content="#0038FF" />
+  <link rel="icon" href="./logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #0038FF;
+      --blue-light: #E8EDFF;
+      --blue-dark: #0028CC;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1E293B;
+      --gray-900: #0F172A;
+      --amber-bg: #FEF3C7;
+      --amber: #92400E;
+      --green-bg: #DCFCE7;
+      --green: #166534;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
+      --shadow-lg: 0 4px 6px rgba(0,0,0,0.04), 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(145deg, var(--gray-50) 0%, #ffffff 50%, var(--blue-light) 100%);
+      min-height: 100vh;
+      color: var(--gray-800);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .logo { height: 36px; width: auto; }
+
+    .badge {
+      background: var(--blue);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin: 24px 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--gray-500);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    /* ── Tabs ── */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 24px;
+      background: var(--gray-100);
+      border-radius: var(--radius-sm);
+      padding: 4px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .tab-btn {
+      flex: 0 0 auto;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: var(--gray-500);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover { color: var(--gray-700); }
+
+    .tab-btn.active {
+      background: white;
+      color: var(--blue);
+      box-shadow: var(--shadow);
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── Cards ── */
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--gray-100);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--blue-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card-icon svg { width: 20px; height: 20px; color: var(--blue); }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--gray-800);
+    }
+
+    .card-sub {
+      font-size: 13px;
+      color: var(--gray-500);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .card-header .spacer { margin-left: auto; }
+
+    /* ── Buttons ── */
+    button, .btn {
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      border: none;
+      background: var(--gray-100);
+      color: var(--gray-700);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      line-height: 1.2;
+    }
+
+    button:hover, .btn:hover { background: var(--gray-200); }
+    button svg, .btn svg { width: 16px; height: 16px; }
+
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-primary:hover { background: var(--blue-dark); }
+    .btn-sm { padding: 8px 14px; font-size: 13px; }
+
+    /* ── Notes & chips ── */
+    .info-note {
+      background: var(--blue-light);
+      color: var(--blue-dark);
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+
+    .info-note strong { font-weight: 700; }
+
+    .warn-note {
+      background: var(--amber-bg);
+      color: var(--amber);
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      background: var(--gray-100);
+      color: var(--gray-600);
+      white-space: nowrap;
+    }
+    .chip.blue { background: var(--blue-light); color: var(--blue-dark); }
+    .chip.amber { background: var(--amber-bg); color: var(--amber); }
+    .chip.green { background: var(--green-bg); color: var(--green); }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .section-header {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-600);
+      margin: 20px 0 8px;
+    }
+
+    /* ── Part numbers (click to copy) ── */
+    .pn {
+      display: inline-block;
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      color: var(--blue-dark);
+      background: var(--blue-light);
+      border-radius: 6px;
+      padding: 1px 7px;
+      white-space: nowrap;
+      cursor: copy;
+      transition: background 0.15s ease;
+      font-size: 0.95em;
+    }
+    .pn:hover { background: #d9e1ff; }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 28px;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--gray-900);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-lg);
+      z-index: 50;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    table { width: 100%; border-collapse: collapse; }
+
+    thead th {
+      text-align: left;
+      padding: 12px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-500);
+      background: var(--gray-50);
+      white-space: nowrap;
+    }
+    thead th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    thead th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+
+    tbody td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 13.5px;
+      vertical-align: top;
+      color: var(--gray-700);
+      line-height: 1.5;
+    }
+
+    tbody tr:hover { background: var(--gray-50); }
+    tbody tr:last-child td { border-bottom: none; }
+
+    td.item { font-weight: 600; color: var(--gray-800); min-width: 170px; }
+    td.oe { min-width: 170px; }
+    td.am { min-width: 220px; }
+    td.notes { color: var(--gray-500); font-size: 13px; min-width: 200px; }
+    td .alt { display: block; color: var(--gray-500); font-size: 12px; margin-top: 3px; }
+    td a { color: var(--blue); font-weight: 600; text-decoration: none; }
+    td a:hover { text-decoration: underline; }
+    tr.hidden { display: none; }
+
+    tfoot td {
+      padding: 12px 14px;
+      font-size: 13px;
+      color: var(--gray-500);
+      background: var(--gray-50);
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    }
+
+    .filter-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .filter-wrap input {
+      flex: 1;
+      max-width: 420px;
+      padding: 11px 14px;
+      font-size: 14px;
+      font-family: inherit;
+      font-weight: 500;
+      border-radius: var(--radius-sm);
+      border: 2px solid var(--gray-200);
+      background: var(--gray-50);
+      color: var(--gray-800);
+      transition: all 0.2s ease;
+    }
+    .filter-wrap input:focus {
+      outline: none;
+      border-color: var(--blue);
+      background: white;
+      box-shadow: 0 0 0 4px var(--blue-light);
+    }
+    .filter-wrap input::placeholder { color: var(--gray-400); font-weight: 400; }
+    .filter-count { font-size: 13px; color: var(--gray-500); }
+
+    /* ── Fleet overview ── */
+    .vgrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .vcard {
+      background: white;
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--gray-100);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .vcard:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+
+    .vcard .plate {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      color: var(--gray-900);
+      line-height: 1.1;
+    }
+    .vcard .body { font-size: 13.5px; color: var(--gray-600); font-weight: 500; }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 4px 12px;
+      font-size: 13px;
+    }
+    .spec-grid dt { color: var(--gray-400); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; padding-top: 2px; }
+    .spec-grid dd { margin: 0; color: var(--gray-700); font-weight: 500; word-break: break-word; }
+    .vcard .actions { margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px; }
+
+    /* ── Vehicle picker ── */
+    .vpicker {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .vpick {
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 2px solid var(--gray-200);
+      background: white;
+      color: var(--gray-600);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .vpick:hover { border-color: var(--gray-300); background: var(--gray-50); }
+    .vpick.active { border-color: var(--blue); background: var(--blue); color: white; box-shadow: 0 0 0 4px var(--blue-light); }
+
+    .vhero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 24px;
+    }
+    .vhero .plate-big {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      color: var(--gray-900);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .vhero .body-line { font-size: 15px; color: var(--gray-600); font-weight: 500; margin-bottom: 12px; }
+    .vhero .note { font-size: 13px; color: var(--gray-500); margin-top: 10px; }
+    .vhero .spec-grid { grid-template-columns: 130px 1fr; }
+    .vhero .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 10px;
+    }
+    .quick {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+    .quick .q-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-400); margin-bottom: 4px; }
+    .quick .q-val { font-size: 14px; font-weight: 600; color: var(--gray-800); line-height: 1.45; }
+    .quick .q-sub { font-size: 12px; color: var(--gray-500); margin-top: 3px; }
+
+    /* ── Lists ── */
+    .nice-list { margin: 0; padding-left: 22px; }
+    .nice-list li { font-size: 14px; color: var(--gray-700); margin-bottom: 10px; }
+    .nice-list li strong { color: var(--gray-900); }
+    .link-list { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 6px 18px; }
+    .link-list li { font-size: 13.5px; }
+    .link-list a { color: var(--blue); font-weight: 600; text-decoration: none; }
+    .link-list a:hover { text-decoration: underline; }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 12.5px;
+      color: var(--gray-400);
+      text-align: center;
+    }
+
+    /* ── Print ── */
+    .print-only { display: none; }
+    @media print {
+      .no-print { display: none !important; }
+      .print-only { display: block !important; }
+      body { background: white; }
+      .container { padding: 0; max-width: none; }
+      .card, .vcard { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
+      .tab-content { display: none !important; }
+      .tab-content.active { display: block !important; }
+      .pn { background: none; padding: 0; color: #000; }
+      tbody tr { page-break-inside: avoid; }
+      .print-header {
+        font-size: 20pt; font-weight: 700; color: #000;
+        padding: 8px 0 8px; margin: 0 0 16px;
+        border-bottom: 3px solid #0038FF; letter-spacing: -0.01em;
+      }
+      .print-header .print-subtitle { display: block; font-size: 11pt; font-weight: 500; color: #555; margin-top: 2px; }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 700px) {
+      h1 { font-size: 24px; }
+      .container { padding: 20px 16px 48px; }
+      .header { gap: 10px; }
+      .logo { height: 26px; }
+      .badge { white-space: nowrap; font-size: 10px; padding: 3px 8px; }
+      #globalPrintBtn { padding: 10px 12px; }
+      #globalPrintBtn .btn-label { display: none; }
+      .vhero { grid-template-columns: 1fr; }
+      .vhero .plate-big { font-size: 32px; }
+      .card { padding: 18px; }
+      .spec-grid { grid-template-columns: 96px 1fr; }
+      .quick-grid { grid-template-columns: 1fr; }
+      .vgrid { grid-template-columns: 1fr; }
+      .vpick { padding: 9px 12px; font-size: 13px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="./logo.png" alt="Tomorrow.bio" class="logo" />
+      <span class="badge">Internal Tool</span>
+      <button id="globalPrintBtn" class="no-print" type="button" style="margin-left:auto;">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+        <span class="btn-label">Print</span>
+      </button>
+    </div>
+
+    <h1>Fleet Parts Reference</h1>
+    <p class="subtitle">Seven Mercedes-Benz Sprinter W906 — identity, service parts, fluids and intervals per vehicle. Click any part number to copy it. Last verified <span id="updated"></span>.</p>
+
+    <!-- TAB NAV -->
+    <div class="tabs no-print" id="tabs">
+      <button class="tab-btn active" data-tab="fleet">Fleet</button>
+      <button class="tab-btn" data-tab="vehicle">By vehicle</button>
+      <button class="tab-btn" data-tab="engine">Engine parts</button>
+      <button class="tab-btn" data-tab="brakes">Brakes</button>
+      <button class="tab-btn" data-tab="fluids">Fluids</button>
+      <button class="tab-btn" data-tab="common">Common items</button>
+      <button class="tab-btn" data-tab="kits">Mercedes kits</button>
+      <button class="tab-btn" data-tab="intervals">Intervals</button>
+      <button class="tab-btn" data-tab="ordering">Ordering</button>
+      <button class="tab-btn" data-tab="sources">Sources</button>
+    </div>
+
+    <div class="tab-content active" id="tab-fleet"></div>
+    <div class="tab-content" id="tab-vehicle"></div>
+    <div class="tab-content" id="tab-engine"></div>
+    <div class="tab-content" id="tab-brakes"></div>
+    <div class="tab-content" id="tab-fluids"></div>
+    <div class="tab-content" id="tab-common"></div>
+    <div class="tab-content" id="tab-kits"></div>
+    <div class="tab-content" id="tab-intervals"></div>
+    <div class="tab-content" id="tab-ordering"></div>
+    <div class="tab-content" id="tab-sources"></div>
+
+    <p class="footer">Vehicle data transcribed from the registration documents (Zulassungsbescheinigung Teil I / Fahrzeugausweis). Part numbers are cross-checked against the manufacturer catalogues listed under Sources — always compare with the number on the old part before ordering.</p>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="./data.js"></script>
+  <script>
+  /* ═══════════════════════════════════════════════════════════════════════
+     Rendering — everything below reads FLEET_DATA from data.js
+     ═══════════════════════════════════════════════════════════════════════ */
+  const D = FLEET_DATA;
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  /* Wrap Mercedes part numbers (A 651 180 01 09, N 007603 014106) in copy chips */
+  const PN_RE = /\b([AN])\s?(\d{3})\s?(\d{3})\s?(\d{2})\s?(\d{2})\b|\bN\s?(\d{6})\s?(\d{6})\b/g;
+  function pnify(text) {
+    return esc(text).replace(PN_RE, (m) => {
+      const compact = m.replace(/\s+/g, "");
+      return `<span class="pn" data-copy="${compact}" title="Click to copy ${compact}">${m}</span>`;
+    });
+  }
+
+  const ICONS = {
+    van: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h11v9H3zM14 10h4l3 3v3h-7zM6 19a2 2 0 100-4 2 2 0 000 4zm11 0a2 2 0 100-4 2 2 0 000 4z"/></svg>',
+    engine: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 5h4v2h3l2 2h3v8h-3l-2 2H8l-2-2H3V9h3V7h1V5z"/></svg>',
+    brake: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke-width="2"/><path stroke-width="2" stroke-linecap="round" d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>',
+    drop: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3s6 7 6 11a6 6 0 11-12 0c0-4 6-11 6-11z"/></svg>',
+    list: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>',
+    box: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>',
+    clock: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"/><path stroke-width="2" stroke-linecap="round" d="M12 7v5l3 2"/></svg>',
+    cart: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h14M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"/></svg>',
+    link: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 010 5.656l-3 3a4 4 0 01-5.656-5.656l1.5-1.5M10.172 13.828a4 4 0 010-5.656l3-3a4 4 0 015.656 5.656l-1.5 1.5"/></svg>',
+    tyre: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke-width="2"/></svg>',
+    warn: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v4m0 4h.01M10.3 4.3l-8 14A2 2 0 004 21h16a2 2 0 001.7-2.7l-8-14a2 2 0 00-3.4 0z"/></svg>',
+    book: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.5A4.5 4.5 0 007.5 4H3v14h4.5A4.5 4.5 0 0112 20a4.5 4.5 0 014.5-2H21V4h-4.5A4.5 4.5 0 0012 6.5zm0 0V20"/></svg>',
+    copy: '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>'
+  };
+
+  function card(iconKey, title, bodyHtml, sub = "", extraHeader = "") {
+    return `<div class="card">
+      <div class="card-header">
+        <div class="card-icon">${ICONS[iconKey] || ICONS.list}</div>
+        <div><div class="card-title">${title}</div>${sub ? `<div class="card-sub">${sub}</div>` : ""}</div>
+        ${extraHeader ? `<div class="spacer">${extraHeader}</div>` : ""}
+      </div>
+      ${bodyHtml}
+    </div>`;
+  }
+
+  function partsTable(rows, opts = {}) {
+    const headers = opts.headers || ["Item", "Mercedes OE number", "Premium aftermarket", "Notes"];
+    const body = rows.map(r => {
+      const links = (r.links || []).map(([t, u]) => `<a href="${u}" target="_blank" rel="noopener">${esc(t)} ↗</a>`).join(" · ");
+      return `<tr>
+        <td class="item">${esc(r.item)}</td>
+        <td class="oe">${pnify(r.oe)}${r.oeAlt ? `<span class="alt">${pnify(r.oeAlt)}</span>` : ""}</td>
+        <td class="am">${esc(r.am || "—")}</td>
+        <td class="notes">${pnify(r.notes || "")}${links ? (r.notes ? " · " : "") + links : ""}</td>
+      </tr>`;
+    }).join("");
+    return `<div class="table-wrap"><table>
+      <thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead>
+      <tbody>${body}</tbody>
+    </table></div>`;
+  }
+
+  function filterBar(scopeId, placeholder = "Filter rows — part number, brand, item…") {
+    return `<div class="filter-wrap no-print">
+      <input type="search" data-filter="${scopeId}" placeholder="${placeholder}" />
+      <span class="filter-count" data-count="${scopeId}"></span>
+    </div>`;
+  }
+
+  /* ── helpers ── */
+  const brakeLabel = (b) => b === "twin" ? "4.6 t twin-wheel brakes" : "3.5 t single-wheel brakes";
+  const byId = (id) => D.vehicles.find(v => v.id === id);
+  function vehicleChips(v) {
+    return `<div class="chip-row">
+      <span class="chip blue">${esc(v.engine)}</span>
+      <span class="chip">${esc(v.emission)}</span>
+      <span class="chip">${v.brakes === "twin" ? "4.6 t chassis · twin rear" : "3.5 t · single rear"}</span>
+      ${v.adblue ? '<span class="chip green">AdBlue</span>' : ""}
+      ${v.facelift ? '<span class="chip">Facelift 2013+</span>' : ""}
+      ${v.docOld ? '<span class="chip amber">Old document</span>' : ""}
+    </div>`;
+  }
+  function fuelFilterRows(v) {
+    const eng = D.engines[v.engine];
+    return eng.fuelFilters[v.fuelFilter] || [];
+  }
+
+  /* ═══ TAB: FLEET ═══ */
+  function renderFleet() {
+    const cards = D.vehicles.map(v => `
+      <div class="vcard">
+        <div>
+          <div class="plate">${esc(v.plate)}</div>
+          <div class="body">${esc(v.body)}</div>
+        </div>
+        ${vehicleChips(v)}
+        <dl class="spec-grid">
+          <dt>VIN</dt><dd>${esc(v.vin)}</dd>
+          <dt>Model</dt><dd>${esc(v.model)} · ${esc(v.gvwClass)}</dd>
+          <dt>First reg.</dt><dd>${esc(v.firstReg)}</dd>
+          <dt>Tyres</dt><dd>${esc(v.tyres)}</dd>
+          <dt>${v.id === "ZH" ? "MFK" : "Next HU"}</dt><dd>${esc(v.hu)}${v.docOld ? " — superseded document, check the current one" : ""}</dd>
+        </dl>
+        <div class="actions">
+          <button class="btn-primary btn-sm" data-open-vehicle="${v.id}">Parts list →</button>
+          <a class="btn btn-sm" href="${D.catalog[v.catalog].url}" target="_blank" rel="noopener">${ICONS.link} Autodoc</a>
+        </div>
+      </div>`).join("");
+
+    const tech = D.vehicles.map(v => `<tr>
+        <td class="item">${esc(v.plate)}</td>
+        <td>${esc(v.engine)} · ${esc(v.displacement)} · ${esc(v.power)}</td>
+        <td>${esc(v.emission)}<span class="alt">${esc(v.emissionDetail)}</span></td>
+        <td>${esc(v.model)}<span class="alt">${esc(v.typ)}</span></td>
+        <td>${esc(v.gvw)}<span class="alt">axle loads ${esc(v.axleLoads)}</span></td>
+        <td>${esc(v.tyres)}</td>
+        <td>${esc(v.dims)}<span class="alt">kerb ${esc(v.kerb)}</span></td>
+        <td>${esc(v.firstReg)}<span class="alt">doc ${esc(v.docDate)} · HSN/TSN ${esc(v.hsn)} / ${esc(v.tsn)}</span></td>
+      </tr>`).join("");
+
+    $("tab-fleet").innerHTML = `
+      <div class="print-header print-only">Fleet Parts Reference<span class="print-subtitle">Fleet overview · ${esc(D.updated)}</span></div>
+      <div class="info-note"><strong>Read this first.</strong> Six vans have the 2.1 L OM651 (316 CDI, 120 kW); B IO 1771 has the older 2.2 L OM646. Five (1770, 1771, 1772, 1774, 1775) are coachbuilt bodies on the twin-rear-wheel <strong>4.6 t chassis 906.153</strong>, down-rated on paper to 3.5 t — brakes, wheels and suspension are the <strong>416 CDI</strong> items, not 3.5 t van items. B IO 1773 is a 3.5 t panel van (906.633); ZH 651 988 is a box body on the 3.5 t chassis (906.133).</div>
+      <div class="vgrid">${cards}</div>
+      ${card("van", "Technical data from the registration documents", `<div class="table-wrap"><table>
+        <thead><tr><th>Plate</th><th>Engine</th><th>Emission class</th><th>Model code</th><th>GVW</th><th>Tyres</th><th>L × W × H</th><th>First registration</th></tr></thead>
+        <tbody>${tech}</tbody>
+        <tfoot><tr><td colspan="8">All German documents show HSN 1313 with TSN 00000000 (individual approvals) — the KBA-number search finds nothing; pick the catalogue model manually (see Ordering).</td></tr></tfoot>
+      </table></div>`)}`;
+  }
+
+  /* ═══ TAB: BY VEHICLE ═══ */
+  let currentVehicle = D.vehicles[0].id;
+
+  function renderVehicleTab() {
+    const picker = D.vehicles.map(v => `<button class="vpick ${v.id === currentVehicle ? "active" : ""}" data-vehicle="${v.id}">${esc(v.plate)}</button>`).join("");
+    $("tab-vehicle").innerHTML = `
+      <div class="vpicker no-print" id="vpicker">${picker}</div>
+      <div id="vehicleDetail"></div>`;
+    renderVehicleDetail(currentVehicle);
+  }
+
+  function renderVehicleDetail(id) {
+    const v = byId(id);
+    const eng = D.engines[v.engine];
+    const brk = D.brakes[v.brakes];
+    const cat = D.catalog[v.catalog];
+    const ff = fuelFilterRows(v);
+
+    /* quick shopping list */
+    const oil = eng.parts.find(p => p.item.startsWith("Oil filter"));
+    const air = eng.parts.find(p => p.item === "Air filter");
+    const glow = eng.parts.find(p => p.item.startsWith("Glow"));
+    const belt = eng.parts.find(p => p.item.startsWith("Poly-V"));
+    const fp = brk.parts.find(p => p.item.startsWith("Front pads"));
+    const rp = brk.parts.find(p => p.item.startsWith("Rear pads"));
+    const fd = brk.parts.find(p => p.item.startsWith("Front discs"));
+    const rd = brk.parts.find(p => p.item.startsWith("Rear discs"));
+    const engineOil = D.fluids.find(f => f.engine === v.engine);
+
+    const quick = [
+      ["Engine oil", engineOil.spec.split("·")[0].trim() + " · 5W-30", engineOil.capacity],
+      ["Oil filter", oil.oe, oil.am.split("·")[0].trim()],
+      ["Drain plug seal", "N 007603 014106", "new ring every oil change"],
+      ["Air filter", air.oe, "MANN C 4312/1"],
+      ...ff.map(f => ["Fuel filter", f.oe, f.item.replace(/^Fuel filter(,| element,)?\s*/, "")]),
+      ["Cabin filter", "A 906 830 02 18 dust · A 906 830 03 18 carbon", "MANN CU 3569 / CUK 3569"],
+      ["Glow plugs (4)", glow.oe, glow.am.split("·")[0].trim()],
+      ["Main poly-V belt", belt.oe, belt.am.split("·")[0].trim()],
+      ["Front discs", fd.oe, fd.notes.split("·")[0].trim()],
+      ["Front pads", fp.oe, fp.item.replace("Front pads, ", "")],
+      ["Rear discs", rd.oe, rd.notes.split("·")[0].trim()],
+      ["Rear pads", rp.oe, rp.item.replace("Rear pads, ", "")],
+      ["Wear sensors", "A 906 540 15 17 (front) · A 906 540 14 17 (rear)", "ATE 24.8190-0424.2 / Bosch 1 987 473 037"],
+      ["Wiper blades", "A 906 820 00 45", "Bosch Aerotwin A 215 S (650 / 600 mm)"],
+      ["Battery", "L5 · 95–100 Ah AGM", "Varta G14 595 901 085"],
+      ...(v.adblue ? [["AdBlue", "ISO 22241 · 18 L tank", "top up at every service"]] : [])
+    ];
+    const quickHtml = `<div class="quick-grid">${quick.map(([l, val, sub]) => `<div class="quick"><div class="q-label">${esc(l)}</div><div class="q-val">${pnify(val)}</div>${sub ? `<div class="q-sub">${esc(sub)}</div>` : ""}</div>`).join("")}</div>`;
+
+    /* engine parts: insert fuel filter rows after the air filter */
+    const engRows = [];
+    eng.parts.forEach(p => { engRows.push(p); if (p.item === "Air filter") engRows.push(...ff); });
+
+    /* fluids for this vehicle */
+    const fluids = D.fluids.filter(f => {
+      if (f.engine && f.engine !== v.engine) return false;
+      if (f.adblue && !v.adblue) return false;
+      if (f.gearbox === "722.6" && v.facelift) return false;
+      if (f.gearbox === "722.9" && !v.facelift) return false;
+      return true;
+    });
+    const fluidRows = fluids.map(f => `<tr>
+      <td class="item">${esc(f.fluid)}</td>
+      <td>${pnify(f.spec)}</td>
+      <td>${esc(f.capacity)}</td>
+      <td class="notes">${esc(f.interval)}</td>
+      <td>${pnify(f.product)}</td>
+    </tr>`).join("");
+
+    /* common items, with facelift-specific wording */
+    const common = D.common.map(c => ({ ...c }));
+
+    /* kits for this engine */
+    const kits = D.kits.filter(k => k.engine === v.engine);
+    const kitRows = kits.map(k => `<tr>
+      <td class="item"><a href="${k.url}" target="_blank" rel="noopener">${esc(k.kit)} ↗</a></td>
+      <td class="oe">${pnify(k.pn)}</td>
+      <td>${pnify(k.contents)}</td>
+      <td class="notes">${esc(k.applies || "")}</td>
+    </tr>`).join("");
+
+    const heroLeft = `
+      <div>
+        <div class="plate-big">${esc(v.plate)}</div>
+        <div class="body-line">${esc(v.body)}</div>
+        ${vehicleChips(v)}
+        ${v.note ? `<div class="note">${esc(v.note)}</div>` : ""}
+        ${v.extras ? `<div class="note">${esc(v.extras)}</div>` : ""}
+        <div class="actions">
+          <a class="btn btn-primary btn-sm" href="${cat.url}" target="_blank" rel="noopener">${ICONS.cart} Open on Autodoc</a>
+          <button class="btn-sm" data-copy-text="${esc(v.vin)}">${ICONS.copy} Copy VIN</button>
+          <button class="btn-sm no-print" data-print-vehicle="1">${ICONS.list} Print this vehicle</button>
+        </div>
+      </div>`;
+    const heroRight = `
+      <dl class="spec-grid">
+        <dt>VIN</dt><dd>${esc(v.vin)}</dd>
+        <dt>Model code</dt><dd>${esc(v.model)}<br><span style="color:var(--gray-500)">${esc(v.typ)}</span></dd>
+        <dt>Catalogue model</dt><dd>${esc(cat.label)}</dd>
+        <dt>Engine</dt><dd>${esc(v.engine)} · ${esc(v.displacement)} · ${esc(v.power)}</dd>
+        <dt>Emission</dt><dd>${esc(v.emission)}<br><span style="color:var(--gray-500)">${esc(v.emissionDetail)}</span></dd>
+        <dt>First registration</dt><dd>${esc(v.firstReg)}</dd>
+        <dt>GVW</dt><dd>${esc(v.gvw)}</dd>
+        <dt>Axle loads</dt><dd>${esc(v.axleLoads)}</dd>
+        <dt>Tyres</dt><dd>${esc(v.tyres)}</dd>
+        <dt>Dimensions</dt><dd>${esc(v.dims)} · kerb ${esc(v.kerb)}</dd>
+        <dt>${v.id === "ZH" ? "Last MFK" : "Next HU"}</dt><dd>${esc(v.hu)} <span style="color:var(--gray-500)">(document ${esc(v.docDate)})</span>${v.docOld ? ' <span class="chip amber">superseded — check current</span>' : ""}</dd>
+        <dt>Holder</dt><dd>${esc(v.holder)}</dd>
+      </dl>`;
+
+    $("vehicleDetail").innerHTML = `
+      <div class="print-header print-only">${esc(v.plate)} — service parts<span class="print-subtitle">${esc(v.body)} · VIN ${esc(v.vin)} · ${esc(D.updated)}</span></div>
+      <div class="card"><div class="vhero">${heroLeft}${heroRight}</div></div>
+      ${v.fuelFilter === "3pin" ? `<div class="warn-note">Early OM651 (built 01/2010): fitted with the 3-pin fuel filter element and a separate heater. The Mercedes service kits do not cover it — order A 642 090 16 52 separately and confirm the connector before ordering.</div>` : ""}
+      ${v.brakes === "single" ? `<div class="info-note">3.5 t front brake: measure the old pad before ordering — 163 mm = standard (WVA 29192), 169 mm = heavy-duty option (WVA 29200, the 4.6 t pad).</div>` : ""}
+      ${card("list", "Quick shopping list", quickHtml, "The numbers you need most often — click to copy")}
+      ${card("engine", "Engine service parts — " + esc(eng.name), filterBar("veng") + `<div data-scope="veng">${partsTable(engRows)}</div>`, "Oil capacity " + esc(eng.oilCapacity))}
+      ${card("brake", "Brakes — " + esc(brk.name), partsTable(brk.parts))}
+      ${card("drop", "Fluids and capacities", `<div class="table-wrap"><table>
+        <thead><tr><th>Fluid</th><th>Spec (Mercedes sheet)</th><th>Capacity</th><th>Interval</th><th>Genuine product / examples</th></tr></thead>
+        <tbody>${fluidRows}</tbody>
+        <tfoot><tr><td colspan="5">Gearbox and rear-axle types are not on the registration document — read the type plates (722.6xx / 722.9xx / 711.6xx and 741.4xx) once and note them here.</td></tr></tfoot>
+      </table></div>`)}
+      ${card("tyre", "Wipers, battery, bulbs, wheel bolts", partsTable(common))}
+      ${card("box", "Mercedes genuine service kits for this engine", `<div class="table-wrap"><table>
+        <thead><tr><th>Kit</th><th>Part number</th><th>Contents</th><th>For</th></tr></thead>
+        <tbody>${kitRows}</tbody>
+      </table></div>`, "VIN-checked by originalteile.mercedes-benz.de")}
+    `;
+    bindFilters($("vehicleDetail"));
+  }
+
+  /* ═══ TAB: ENGINE PARTS ═══ */
+  function renderEngine() {
+    const blocks = Object.entries(D.engines).map(([key, eng]) => {
+      const vans = D.vehicles.filter(v => v.engine === key).map(v => v.plate).join(" · ");
+      const rows = [];
+      eng.parts.forEach(p => {
+        rows.push(p);
+        if (p.item === "Air filter") {
+          Object.entries(eng.fuelFilters).forEach(([variant, list]) => {
+            const who = D.vehicles.filter(v => v.engine === key && v.fuelFilter === variant).map(v => v.plate).join(", ");
+            list.forEach(f => rows.push({ ...f, notes: (who ? "Fits: " + who + " · " : "") + (f.notes || "") }));
+          });
+        }
+      });
+      return card("engine", esc(eng.name), filterBar("eng-" + key) + `<div data-scope="eng-${key}">${partsTable(rows)}</div>`, "Vehicles: " + esc(vans) + " · oil capacity " + esc(eng.oilCapacity));
+    }).join("");
+    $("tab-engine").innerHTML = `<div class="print-header print-only">Engine service parts<span class="print-subtitle">${esc(D.updated)}</span></div>
+      <div class="info-note">Three parts are identical on all seven vans: air filter <span class="pn" data-copy="A0000903751">A 000 090 37 51</span> (MANN C 4312/1), cabin filter <span class="pn" data-copy="A9068300218">A 906 830 02 18</span> dust / <span class="pn" data-copy="A9068300318">A 906 830 03 18</span> carbon (MANN CU 3569 / CUK 3569) and the 300 × 28 mm front brake disc <span class="pn" data-copy="A9064210012">A 906 421 00 12</span>.</div>${blocks}`;
+    bindFilters($("tab-engine"));
+  }
+
+  /* ═══ TAB: BRAKES ═══ */
+  function renderBrakes() {
+    const blocks = Object.values(D.brakes).map(b => card("brake", esc(b.name), partsTable(b.parts), "Vehicles: " + esc(b.vehicles))).join("");
+    $("tab-brakes").innerHTML = `<div class="print-header print-only">Brakes<span class="print-subtitle">${esc(D.updated)}</span></div>
+      <div class="info-note">The front disc is the same on every variant; only the front pad (163 mm vs 169 mm) and the whole rear brake differ. Twin-wheel axle: 303 × 28 mm vented rear discs. Single-wheel: 298 × 16 mm solid. Brake fluid MB 331.0 every 2 years on all.</div>${blocks}`;
+  }
+
+  /* ═══ TAB: FLUIDS ═══ */
+  function renderFluids() {
+    const rows = D.fluids.map(f => `<tr>
+      <td class="item">${esc(f.fluid)}</td>
+      <td class="notes">${esc(f.applies)}</td>
+      <td>${pnify(f.spec)}</td>
+      <td>${esc(f.capacity)}</td>
+      <td class="notes">${esc(f.interval)}</td>
+      <td>${pnify(f.product)}</td>
+    </tr>`).join("");
+    $("tab-fluids").innerHTML = `<div class="print-header print-only">Fluids and capacities<span class="print-subtitle">${esc(D.updated)}</span></div>
+      <div class="info-note">One engine oil covers the whole fleet: a <strong>5W-30 with MB-Freigabe 229.52</strong> (or 229.51). MB 228.51, the commercial-vehicle sheet Mercedes workshops often use on Sprinters, is approved too; all three are low-ash oils for the particulate filter, which every van has. The 1 L top-up allowance for non-low-ash oils in the manual is for emergencies only.</div>
+      ${card("drop", "Fluids, specs, capacities and intervals", filterBar("fluids") + `<div data-scope="fluids"><div class="table-wrap"><table>
+        <thead><tr><th>Fluid</th><th>Applies to</th><th>Spec (Mercedes sheet)</th><th>Capacity</th><th>Change interval</th><th>Genuine product and examples</th></tr></thead>
+        <tbody>${rows}</tbody>
+        <tfoot><tr><td colspan="6">Mixing MB 325.0 and 325.6 coolant is permitted by the Mercedes sheets, but a full exchange is cleaner. ATF levels on both automatics are temperature-dependent — have the fill checked with the Mercedes procedure.</td></tr></tfoot>
+      </table></div></div>`)}`;
+    bindFilters($("tab-fluids"));
+  }
+
+  /* ═══ TAB: COMMON ═══ */
+  function renderCommon() {
+    $("tab-common").innerHTML = `<div class="print-header print-only">Items common to all seven vans<span class="print-subtitle">${esc(D.updated)}</span></div>
+      ${card("tyre", "Wipers, battery, bulbs, wheel bolts, key battery", partsTable(D.common, { headers: ["Item", "Mercedes OE / spec", "Premium aftermarket", "Notes"] }), "Same on every W906 unless noted")}`;
+  }
+
+  /* ═══ TAB: KITS ═══ */
+  function renderKits() {
+    const rows = D.kits.map(k => `<tr>
+      <td class="item"><a href="${k.url}" target="_blank" rel="noopener">${esc(k.kit)} ↗</a></td>
+      <td class="oe">${pnify(k.pn)}</td>
+      <td>${pnify(k.contents)}</td>
+      <td class="notes">${esc(k.applies || "")}</td>
+    </tr>`).join("");
+    $("tab-kits").innerHTML = `<div class="print-header print-only">Mercedes genuine service kits<span class="print-subtitle">${esc(D.updated)}</span></div>
+      <div class="info-note">One box per service, VIN-checked by <a href="https://originalteile.mercedes-benz.de/" target="_blank" rel="noopener" style="color:inherit;font-weight:700">originalteile.mercedes-benz.de</a>. The simplest way to get the correct genuine parts. ${esc(D.kitsNote)}</div>
+      ${card("box", "Service-Kit A / B and filter packs for the Sprinter 906", `<div class="table-wrap"><table>
+        <thead><tr><th>Kit</th><th>Part number</th><th>Contents</th><th>For</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>`)}`;
+  }
+
+  /* ═══ TAB: INTERVALS ═══ */
+  function renderIntervals() {
+    const rows = D.intervals.map(i => `<tr>
+      <td class="item">${esc(i.item)}</td>
+      <td>${esc(i.mb)}</td>
+      <td>${pnify(i.fleet)}</td>
+      <td class="notes">${esc(i.applies)}</td>
+    </tr>`).join("");
+    const tyres = D.tyrePressures.map(t => `<tr>
+      <td class="item">${esc(t.tyre)}</td>
+      <td class="notes">${esc(t.vans)}</td>
+      <td>${esc(t.front)}</td>
+      <td>${esc(t.rear)}</td>
+    </tr>`).join("");
+    const weak = D.weakPoints.map(w => `<li><strong>${esc(w.title)}.</strong> ${pnify(w.text)}${w.url ? ` <a href="${w.url}" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600;text-decoration:none">source ↗</a>` : ""}</li>`).join("");
+    $("tab-intervals").innerHTML = `<div class="print-header print-only">Intervals<span class="print-subtitle">${esc(D.updated)}</span></div>
+      <div class="info-note">At the mileage these vans do, <strong>time limits bite before kilometres</strong>: oil and cabin filter yearly, brake fluid and fuel filter every two years, air filter and belt every four. "Mercedes interval" follows the 906 maintenance booklet; "Fleet recommendation" is the conservative schedule for low-mileage ambulances and hearses.</div>
+      ${card("clock", "Service schedule", filterBar("intervals") + `<div data-scope="intervals"><div class="table-wrap"><table>
+        <thead><tr><th>Item</th><th>Mercedes interval</th><th>Fleet recommendation</th><th>Applies to</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div></div>`)}
+      ${card("tyre", "Tyre pressures from the Sprinter manual table", `<div class="table-wrap"><table>
+        <thead><tr><th>Tyre</th><th>Vans</th><th>Front (empty / loaded)</th><th>Rear (empty / loaded)</th></tr></thead>
+        <tbody>${tyres}</tbody>
+        <tfoot><tr><td colspan="4">The vans run near kerb-plus-crew weight, so use the loaded values. Confirm against the placard on the driver's B-pillar. Never below 3.0 bar on any axle. Re-torque wheel bolts (240 Nm) 50 km after any wheel change.</td></tr></tfoot>
+      </table></div>`)}
+      ${card("warn", "Known weak points to watch", `<ul class="nice-list">${weak}</ul>`)}`;
+    bindFilters($("tab-intervals"));
+  }
+
+  /* ═══ TAB: ORDERING ═══ */
+  function renderOrdering() {
+    const rows = Object.entries(D.catalog).map(([key, c]) => {
+      const vans = D.vehicles.filter(v => v.catalog === key).map(v => v.plate).join(" · ");
+      return `<tr><td class="item">${esc(vans)}</td><td>${esc(c.label)}</td><td><a href="${c.url}" target="_blank" rel="noopener">Autodoc ID ${esc(c.id)} ↗</a></td></tr>`;
+    }).join("");
+    const checks = D.checks.map(c => `<li>${pnify(c)}</li>`).join("");
+    $("tab-ordering").innerHTML = `<div class="print-header print-only">How to look up parts<span class="print-subtitle">${esc(D.updated)}</span></div>
+      <div class="info-note">The KBA number search (HSN/TSN) finds nothing for these vans because the TSN is 00000000 (individual approvals). Pick the model manually, or order genuine parts by VIN.</div>
+      ${card("cart", "Autodoc and other TecDoc shops (kfzteile24, autoteiledirekt, pkwteile)", `<div class="table-wrap"><table>
+        <thead><tr><th>Vehicles</th><th>Pick this model</th><th>Page</th></tr></thead>
+        <tbody>${rows}</tbody>
+        <tfoot><tr><td colspan="3">Where a listing says "Zwillingsbereifung" (twin tyres) or "5-Tonner", that is the 906.153 vans; "Einfachbereifung" is 1773 and ZH 651 988. Use the first-registration month whenever a part has a "bis/ab Baujahr" split.</td></tr></tfoot>
+      </table></div>`, "Choose Mercedes-Benz → Sprinter → body type → engine line")}
+      ${card("box", "Genuine Mercedes parts by VIN", `<ul class="nice-list">
+        <li><a href="https://originalteile.mercedes-benz.de/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600;text-decoration:none">originalteile.mercedes-benz.de</a> (Mercedes-Benz AG shop) checks fitment against the VIN and sells the Service-Kit A/B and filter packs listed under Mercedes kits.</li>
+        <li>Any Mercedes-Benz Nutzfahrzeug-Niederlassung parts counter will pull the data card (Datenkarte) from the VIN. Ask for a copy once per vehicle: it lists the option codes that decide the gearbox (722.6 vs 722.9, code A89), fuel-filter variant (KL5 water separator), brake variant, A/C and auxiliary heater.</li>
+      </ul>`)}
+      ${card("warn", "Check before ordering", `<ol class="nice-list">${checks}</ol>`)}`;
+  }
+
+  /* ═══ TAB: SOURCES ═══ */
+  function renderSources() {
+    const groups = D.sources.map(g => `<div class="section-header">${esc(g.group)}</div><ul class="link-list">${g.links.map(([t, u]) => `<li><a href="${u}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("")}</ul>`).join("");
+    $("tab-sources").innerHTML = `<div class="print-header print-only">Sources<span class="print-subtitle">${esc(D.updated)}</span></div>
+      ${card("book", "Sources", `<p style="margin:0 0 6px;font-size:14px;color:var(--gray-600)">Vehicle data is transcribed from the seven registration documents (Zulassungsbescheinigung Teil I for B IO 1770–1775, Teil II for 1770, Fahrzeugausweis for ZH 651 988). Part numbers and specifications were taken from the pages below, opened on ${esc(D.updated)}, and cross-checked in a second pass.</p>${groups}`)}`;
+  }
+
+  /* ═══ Filtering ═══ */
+  function bindFilters(root) {
+    root.querySelectorAll("input[data-filter]").forEach(inp => {
+      const scope = root.querySelector(`[data-scope="${inp.dataset.filter}"]`);
+      const count = root.querySelector(`[data-count="${inp.dataset.filter}"]`);
+      if (!scope) return;
+      const apply = () => {
+        const q = inp.value.trim().toLowerCase().replace(/\s+/g, "");
+        let shown = 0, total = 0;
+        scope.querySelectorAll("tbody tr").forEach(tr => {
+          total++;
+          const txt = tr.textContent.toLowerCase().replace(/\s+/g, "");
+          const hit = !q || txt.includes(q);
+          tr.classList.toggle("hidden", !hit);
+          if (hit) shown++;
+        });
+        if (count) count.textContent = q ? `${shown} of ${total} rows` : "";
+      };
+      inp.addEventListener("input", apply);
+    });
+  }
+
+  /* ═══ Tabs, routing, copy ═══ */
+  function showTab(name, push = true) {
+    if (!$("tab-" + name)) name = "fleet";
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.toggle("active", c.id === "tab-" + name));
+    if (push) {
+      const h = name === "vehicle" ? `#vehicle/${currentVehicle}` : `#${name}`;
+      if (location.hash !== h) history.replaceState(null, "", h);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function selectVehicle(id, push = true) {
+    if (!byId(id)) return;
+    currentVehicle = id;
+    document.querySelectorAll(".vpick").forEach(b => b.classList.toggle("active", b.dataset.vehicle === id));
+    renderVehicleDetail(id);
+    if (push) history.replaceState(null, "", `#vehicle/${id}`);
+  }
+
+  function route() {
+    const h = location.hash.replace(/^#/, "");
+    if (h.startsWith("vehicle")) {
+      const id = h.split("/")[1];
+      if (id && byId(id)) { currentVehicle = id; }
+      renderVehicleTab();
+      showTab("vehicle", false);
+    } else if (h) {
+      showTab(h, false);
+    }
+  }
+
+  let toastTimer;
+  function toast(msg) {
+    const t = $("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove("show"), 1600);
+  }
+  async function copyText(txt, label) {
+    try { await navigator.clipboard.writeText(txt); toast(`Copied ${label || txt}`); }
+    catch { toast("Copy blocked by browser"); }
+  }
+
+  document.addEventListener("click", (e) => {
+    const pn = e.target.closest(".pn");
+    if (pn) { copyText(pn.dataset.copy, pn.dataset.copy); return; }
+    const ct = e.target.closest("[data-copy-text]");
+    if (ct) { copyText(ct.dataset.copyText); return; }
+    const ov = e.target.closest("[data-open-vehicle]");
+    if (ov) { currentVehicle = ov.dataset.openVehicle; renderVehicleTab(); showTab("vehicle"); return; }
+    const vp = e.target.closest(".vpick");
+    if (vp) { selectVehicle(vp.dataset.vehicle); return; }
+    const pv = e.target.closest("[data-print-vehicle]");
+    if (pv) { window.print(); return; }
+    const tb = e.target.closest(".tab-btn");
+    if (tb) { if (tb.dataset.tab === "vehicle") renderVehicleTab(); showTab(tb.dataset.tab); }
+  });
+
+  $("globalPrintBtn").addEventListener("click", () => window.print());
+  window.addEventListener("hashchange", route);
+
+  /* ═══ Boot ═══ */
+  $("updated").textContent = D.updated;
+  renderFleet();
+  renderVehicleTab();
+  renderEngine();
+  renderBrakes();
+  renderFluids();
+  renderCommon();
+  renderKits();
+  renderIntervals();
+  renderOrdering();
+  renderSources();
+  route();
+  </script>
+</body>
+</html>
